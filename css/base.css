@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: black;
+    color: white;
+}
+
+p {
+    margin: 0.5em;
+}
+
+a {
+    color: #4078c0;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.divider {
+    height: 1px;
+    background-color: green;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.uploadButton {
+    background-color: green;
+    padding: 5px;
+    width: 170px;
+    margin-top: 15px;
+    align-self: center;
+}
