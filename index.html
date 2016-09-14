@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SRT to TXT</title>
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base.css">
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <p>Desenvolvido por:</p>
+        <p>Arthur Denner - <a target="_blank" href="https://github.com/arthurdenner/">Github</a></p>
+        <p>Matheus Cristian - <a target="_blank" href="https://github.com/mathues/">Github</a></p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div>
+        <p>Este software transforma em SRT em TXT,<br />
+        que pode ser aberto no Word,<br />
+        facilitando a revisão.<br /></p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="uploadButton">
+        <label for="uploadButton"><i class="fa fa-upload"></i> Selecione um arquivo</label>
+        <input id="uploadButton" class="inputfile" type="file" accept=".srt" onchange="tratarSRT()">
+      </div>
+    </div>
+
+    <pre id="output"></pre>
+  </body>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+
+</html>
