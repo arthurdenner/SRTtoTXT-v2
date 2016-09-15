@@ -12,8 +12,8 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow(
     {
-      width: 330,
-      height: 220,
+      width: 340,
+      height: 280,
       resizable: true,
       //icon: 'favicon.ico',
     })
