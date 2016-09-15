@@ -12,9 +12,9 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow(
     {
-      width: 330,
-      height: 220,
-      resizable: false,
+      width: 340,
+      height: 280,
+      resizable: true,
       //icon: 'favicon.ico',
     })
 
@@ -37,6 +37,10 @@ function createWindow () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow)
+
+/*app.on('browser-window-created', function(e, window) {
+  window.setMenu(null);
+})*/
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
