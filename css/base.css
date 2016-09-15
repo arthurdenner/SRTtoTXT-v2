@@ -4,13 +4,19 @@ body {
     border: 0;
     background-color: black;
     color: white;
+    cursor: default;
 }
 
 p {
     margin: 0.5em;
 }
 
-a {
+label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.githubLink {
     color: #4078c0;
 }
 
@@ -18,6 +24,12 @@ a {
     text-align: center;
     display: flex;
     flex-direction: column;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .divider {
@@ -32,11 +44,6 @@ a {
     overflow: hidden;
     position: absolute;
     z-index: -1;
-}
-
-.inputfile + label {
-    display: inline-block;
-    cursor: pointer;
 }
 
 .uploadButton {

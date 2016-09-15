@@ -10,8 +10,8 @@
     <div class="container">
       <div>
         <p>Desenvolvido por:</p>
-        <p>Arthur Denner - <a target="_blank" href="https://github.com/arthurdenner/">Github</a></p>
-        <p>Matheus Cristian - <a target="_blank" href="https://github.com/mathues/">Github</a></p>
+        <p>Arthur Denner - <a class="githubLink"  target="_blank" href="https://github.com/arthurdenner/">Github</a></p>
+        <p>Matheus Cristian - <a class="githubLink" target="_blank" href="https://github.com/mathues/">Github</a></p>
       </div>
 
       <div class="divider"></div>
@@ -29,12 +29,6 @@
         <input id="uploadButton" class="inputfile" type="file" accept=".srt" onchange="tratarSRT()">
       </div>
     </div>
-
-    <pre id="output"></pre>
   </body>
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
-
+  <script>require('./renderer.js')</script>
 </html>
