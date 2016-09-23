@@ -10,7 +10,14 @@ function downloadFile(content, fileName) {
 }
 
 function toText(text){
-    return text.replace(/(<([^>]+)>)/ig, "").split(/(\r\n|\r|\n)?\d+(\r\n|\r|\n)\d{2}:\d{2}:\d{2},\d{3} --> \d{2}:\d{2}:\d{2},\d{3}(\r\n|\r|\n)/gi).join(" ").split(/\n+/).join(" ").replace(/((\.|\?|\!)+)\s+/g,"$1\n").split("\n ").join("\n").trim();
+    var withoutTags = text.replace(/(<([^>]+)>)/ig, "");
+    var withoutTime = withoutTags.replace(/(\r\n|\r|\n)?\d+(\r\n|\r|\n)\d{2}:\d{2}:\d{2},\d{3} --> \d{2}:\d{2}:\d{2},\d{3}(\r\n|\r|\n)/gi, " ");
+    var withoutMultiplesLines = withoutTime.replace(/\n+/g, " ");
+    var separeIfforFinalDeFrase = withoutMultiplesLines.replace(/((\.|\?|\!)+)\s+/g, "$1\n");
+    var withoutExtraSpaces = separeIfforFinalDeFrase.replace(/\n /g, "\n").replace(/[ ]+/g, " ");
+    var words = withoutExtraSpaces.replace(/(Sr(ta)?|Dr(a)?)\.\n/gi, "$1. ");
+    var withoutTrace = words.replace(/- /g, "");
+    return withoutTrace.trim();
 }
 
 function tratarSRT() {
